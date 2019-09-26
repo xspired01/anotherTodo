@@ -1,0 +1,60 @@
+
+.completed {
+    color: gray;
+    text-decoration: line-through;
+}
+
+.Todo {
+    display: flex;
+    margin: 0 -3rem 4px;
+    padding: 1.1rem 3rem;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(225,255,255, 0.1);
+    overflow: hidden;
+    position: relative;
+    transition: opacity 500ms ease-in-out
+}
+
+.Todo-task {
+    position: relative;
+    transition: opacity 0.4s linear;
+}
+
+.Todo-buttons {
+    flex-shrink: 0;
+    padding-left: 0.7em;
+    margin-left: auto;
+}
+
+.Todo-buttons button {
+    border: none;
+    font-size: 1em;
+    margin: 0.4em;
+    background: none;
+    cursor: pointer;
+    color: #fff;
+}
+
+.Todo-edit button {
+    border: none;
+    font-size: 2em;
+    margin: 0.4em;
+    background: none;
+    cursor: pointer;
+    color: #fff;
+}
+
+/* This is for the Todo edit form that shows when EDITING a todo */
+.Todo-edit-form {
+    display:flex;
+    flex-wrap: wrap;
+}
+
+.Todo-edit-form input{
+    flex-grow: 1;
+    border: 10px white;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 0 1.5em;
+    font-size: initial;
+}
