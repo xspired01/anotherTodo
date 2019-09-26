@@ -1,4 +1,4 @@
-##Summary
+## Summary
 
 This is a simple Awesome Todo app with React, but no Redux. Just practicing passing state & props from different components, font awesome, and CSS. This is based on a few tutorials. CSS is a mix from a tutorial and code pens. The Edit Todo field is pre-populated with data from that task, which is different from some other input forms which usually just ask for input and the fields are blank. 
 
