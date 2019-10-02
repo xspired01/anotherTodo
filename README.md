@@ -1,3 +1,45 @@
+# Hooked on Hooks
+
+## Summary
+
+Practice using React hooks for a simple todo app. This Todo App is taken from a tutorial on hooks and is a combination of notes for quick reference for me in the future. Hooks components "hook" into state and lifecycle methods with useState(), useEffect(), custom hooks, etc., to pass data between different components in this Todo App. (Technically, the React Docs state that hooks allow you to access lifecycle FEATURES, not lifecycle methods. Basically the concept is hooks are an easier way to pass state).
+
+## React Hooks
+
+Hooks are functional components, not class components. Instead of building a constructor function, using super, initializing state, & binding functions as with class components, hooks "just" return an array with a "slice" of state and a function that updates that slice (NOTE: this is a cliff notes version of the base concept, hence the quotes around just).  The benefits of hooks is less writing and less wrapping of components (the pattern of higher order components or HOCs, which are components that take in other components and return a new component, much like higher order functions. HOCs are a pattern to re-use component state and are different from the "usual" components that takes in props and renders a new piece of data on screen). With less code and less wrapping the benefit is easier/quicker to pass state, easier to read code, and easier to understand code.
+
+One downside of less code is being less explicit. With less code, there are assumptions made about what is being passed from components, which component receives data, and where the data is coming from. That can be addressed with style guides and descriptive code comments.
+
+### useState
+
+useState() is a function that takes in one argument (the intial state) and returns two elements: a "slice" of state and a function that updates that slice.  The initial state does NOT have to be an object like this.state;
+
+The code below is based on the React Docs, and shown as a quick reference for the basic concept. 
+
+`
+import React, { useState } from 'react';
+
+export default Counter(){
+    // setting the two elements for useState.
+    // count is the slice of state & 
+    // setCount is the function that updates that slice
+    const [count, setCount] = useState(0);
+
+    return (
+        <div>
+            <p>Click to increase count. Count is {count}</p>
+            <button> onClick = {() => setCount(count + 1)}>
+                Click Me!
+            </button>
+        </div>
+    );
+}
+
+`
+
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
