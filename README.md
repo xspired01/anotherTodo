@@ -16,7 +16,7 @@ useState() is a function that takes in one argument (the intial state) and retur
 
 The code below is based on the React Docs, and shown as a quick reference for the basic concept. 
 
-`
+```
 import React, { useState } from 'react';
 
 export default Counter(){
@@ -35,7 +35,7 @@ export default Counter(){
     );
 }
 
-`
+```
 
 
 
