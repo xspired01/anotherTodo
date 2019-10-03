@@ -23,6 +23,7 @@ export default Counter(){
     // setting the two elements for useState.
     // count is the slice of state & 
     // setCount is the function that updates that slice
+    // 0 is the argument taken into useState to set the initial state
     const [count, setCount] = useState(0);
 
     return (
@@ -39,7 +40,7 @@ export default Counter(){
 
 ## Hooks in general
 
-Hooks MUST start with the word use. Their is useState, useEffect, etc. For custom hooks, they can be called anything, but must start with the word use.
+Hooks MUST start with the word use. There is useState, useEffect, etc. For custom hooks, they can be called anything, but MUST start with the word use.
 
 ## Limitations
 
