@@ -6,9 +6,9 @@ Practice using React hooks for a simple todo app. This Todo App is taken from a 
 
 ## React Hooks
 
-Hooks are functional components, not class components. Instead of building a constructor function, using super, initializing state, & binding functions as with class components, hooks "just" return an array with a "slice" of state and a function that updates that slice (NOTE: this is a cliff notes version of the base concept, hence the quotes around just).  The benefits of hooks is less writing and less wrapping of components (the pattern of higher order components or HOCs, which are components that take in other components and return a new component, much like higher order functions. HOCs are a pattern to re-use component state and are different from the "usual" components that takes in props and renders a new piece of data on screen). With less code and less wrapping the benefit is easier/quicker to pass state, easier to read code, and easier to understand code.
+Hooks are functions, not classes nor are they class components. Instead of building a constructor function, using super, initializing state, & binding functions as with class components, hooks "just" return an array with a "slice" of state and a function that updates that slice (NOTE: this is a cliff notes version of the base concept, hence the quotes around just).  The benefits of hooks is less writing and less wrapping of components (the pattern of higher order components or HOCs, which are components that take in other components and return a new component, much like higher order functions. HOCs are a pattern to re-use component state and are different from the "usual" components that takes in props and renders a new piece of data on screen). With less code and less wrapping the benefit is easier/quicker to pass state, easier to read code, and easier to understand code.
 
-One downside of less code is being less explicit. With less code, there are assumptions made about what is being passed from components, which component receives data, and where the data is coming from. That can be addressed with style guides and descriptive code comments.
+One downside of less code is being less explicit. With less code, there are assumptions made about what is being passed from components, which component receives data, and where the data is coming from. Also, if you come back to the same code 6 months or 6 weeks later, would you still be able to pick up where you left off just by reading the code? The benefit of verbose React and Redux code is everything is explicit and must be written, so there is a clear line of thinking and logic to follow. The absence of that line of thought can be addressed with team style guides and descriptive code comments. What is not written in code can be written in comments.
 
 ### useState
 
@@ -37,6 +37,13 @@ export default Counter(){
 
 ```
 
+## Hooks in general
+
+Hooks MUST start with the word use. Their is useState, useEffect, etc. For custom hooks, they can be called anything, but must start with the word use.
+
+## Limitations
+
+Hooks can NOT be used in if or for loops. The reason for this is how hooks keep track of state. Hooks keep track of state based on the order of their creation. So, if a hook is inside an if loop, it might be the first created, but not the first executed, then succeeding hooks will grab the wrong piece of state. 
 
 
 
