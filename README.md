@@ -40,11 +40,12 @@ export default Counter(){
 
 ## Hooks in general
 
-Hooks MUST start with the word use. There is useState, useEffect, etc. For custom hooks, they can be called anything, but MUST start with the word use.
+Hooks MUST start with the word use. There is useState, useEffect, useYourOwnHook, etc. For custom hooks, they can be called anything, but MUST start with the word use. 
+And hooks must be called inside a React component.
 
 ## Limitations
 
-Hooks can NOT be used in if or for loops. The reason for this is how hooks keep track of state. Hooks keep track of state based on the order of their creation. So, if a hook is inside an if loop, it might be the first created, but not the first executed, then succeeding hooks will grab the wrong piece of state. 
+Hooks can NOT be used in if loops, for loops, nested functions, or regular JavaScript functions. The reason for this is how hooks keep track of state. React keeps track of hooks based on the order of their creation. So, if a hook is inside an if loop, it might be the first created, but not the first executed, then succeeding hooks will grab the wrong piece of state. Better to put the if conditional INSIDE the hook.
 
 
 
