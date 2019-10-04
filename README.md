@@ -38,16 +38,36 @@ export default Counter(){
 
 ```
 
+### useEffect
+
+useEffect() is a function that accepts another function as an argument and runs that function after every render (ie after the first render and then after every update). 
+
+```
+import React, { useState, useEffect } from "react";
+
+    function Clicker(){
+        const [count, setCount] = useState(0);
+        useEffect()
+        return (
+            <button onClick={() => setCount( count + 1 ) }> Click Here
+            </button>
+        )
+    }
+
+export default Clicker;
+
+```
+
 ## Hooks in general
 
-Hooks MUST start with the word use. There is useState, useEffect, useYourOwnHook, etc. For custom hooks, they can be called anything, but MUST start with the word use. 
+Hooks MUST start with the word use. There is useState, useEffect, useContext, useReducer, useCallback, use<YourOwnHook>, etc. For custom hooks, they can be called anything, but MUST start with the word use. 
 And hooks must be called inside a React component.
 
 ## Limitations
 
 Hooks can NOT be used in if loops, for loops, nested functions, or regular JavaScript functions. The reason for this is how hooks keep track of state. React keeps track of hooks based on the order of their creation. So, if a hook is inside an if loop, it might be the first created, but not the first executed, then succeeding hooks will grab the wrong piece of state. Better to put the if conditional INSIDE the hook.
 
-
+## ------------------------------------------------------------------ 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
